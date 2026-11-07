@@ -1,0 +1,73 @@
+/* Nadir · hoja de estilos del sitio mínimo. Colores de la guía de marca v1. */
+@font-face { font-family: "Jost"; font-weight: 400; font-style: normal; font-display: swap;
+  src: url("../fonts/jost-latin-400-normal.woff2") format("woff2"); }
+@font-face { font-family: "Jost"; font-weight: 500; font-style: normal; font-display: swap;
+  src: url("../fonts/jost-latin-500-normal.woff2") format("woff2"); }
+
+:root {
+  --noche: #0B1A2E; --papel: #F5F2EC; --cian: #35C8E8; --cian-osc: #0A7FA3;
+  --texto2: #4A5566; --borde: #D8D3C8; --tarjeta: #FBFAF7;
+  --ancho: 68rem; --medida: 42rem;
+}
+*, *::before, *::after { box-sizing: border-box; }
+html { font-size: 100%; -webkit-text-size-adjust: 100%; }
+body { margin: 0; background: var(--papel); color: var(--noche);
+  font-family: "Jost", system-ui, sans-serif; font-size: clamp(1.0625rem, 0.98rem + 0.3vw, 1.1875rem);
+  line-height: 1.6; }
+img { max-width: 100%; height: auto; }
+a { color: var(--cian-osc); text-underline-offset: 0.18em; }
+a:hover { color: var(--noche); }
+:focus-visible { outline: 3px solid var(--cian-osc); outline-offset: 3px; }
+
+.saltar { position: absolute; left: -999px; top: 0.5rem; background: var(--noche); color: var(--papel);
+  padding: 0.5rem 1rem; z-index: 10; }
+.saltar:focus { left: 0.5rem; }
+
+.ancho { width: min(100% - 2.5rem, var(--ancho)); margin-inline: auto; }
+
+.cabecera { border-bottom: 1px solid var(--borde); }
+.cabecera__fila { display: flex; flex-wrap: wrap; gap: 1rem 2rem; align-items: center;
+  justify-content: space-between; padding-block: 1.25rem; }
+.marca img { display: block; height: 2.5rem; width: auto; }
+.menu { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.25rem 1.5rem; }
+.menu a { color: var(--noche); text-decoration: none; font-weight: 500; padding-block: 0.25rem;
+  border-bottom: 2px solid transparent; }
+.menu a:hover, .menu a[aria-current="page"] { border-bottom-color: var(--cian-osc); }
+
+main { padding-block: 3rem 4rem; }
+h1, h2, h3 { font-weight: 500; line-height: 1.2; letter-spacing: -0.005em; }
+h1 { font-size: clamp(2rem, 1.5rem + 2.2vw, 3.25rem); margin: 0 0 1rem; max-width: 20ch; }
+h2 { font-size: clamp(1.4rem, 1.2rem + 0.8vw, 1.85rem); margin: 3rem 0 1rem; }
+h3 { font-size: 1.25rem; margin: 0 0 0.5rem; }
+p, dd, li { max-width: var(--medida); }
+.entrada { font-size: 1.15em; color: var(--texto2); }
+
+.portada { padding-block: 1rem 1rem; }
+
+.tarjeta { background: var(--tarjeta); border: 1px solid var(--borde); border-radius: 6px;
+  padding: 1.5rem 1.75rem; }
+.tarjeta h2 { margin-top: 0; font-size: 1.35rem; }
+.tarjeta--pendiente { border-style: dashed; }
+.lista-casos { list-style: none; padding: 0; margin: 2rem 0 0; display: grid; gap: 1.25rem; }
+.enlaces { margin-bottom: 0; font-weight: 500; }
+
+.pasos { padding-left: 1.4rem; display: grid; gap: 1rem; }
+.pasos li::marker { color: var(--cian-osc); font-weight: 500; }
+
+.principios dt { font-weight: 500; margin-top: 1.25rem; }
+.principios dd { margin: 0.25rem 0 0; color: var(--texto2); }
+
+.tabla-envoltura { overflow-x: auto; }
+table { border-collapse: collapse; width: 100%; font-variant-numeric: tabular-nums; }
+caption { text-align: left; color: var(--texto2); padding-bottom: 0.5rem; }
+th, td { text-align: left; vertical-align: top; padding: 0.75rem 1rem 0.75rem 0;
+  border-bottom: 1px solid var(--borde); }
+th { font-weight: 500; }
+.nota { color: var(--texto2); font-size: 0.95em; }
+.cita { background: var(--tarjeta); border-left: 3px solid var(--cian-osc); padding: 0.75rem 1rem; }
+
+.pie { border-top: 1px solid var(--borde); color: var(--texto2); font-size: 0.95em; }
+.pie__fila { padding-block: 1.5rem 2rem; }
+.pie p { margin: 0.25rem 0; }
+
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
