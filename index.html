@@ -6,48 +6,92 @@
 <title>Nadir · Observatorio de riesgo y exposición</title>
 <meta name="description" content="Nadir reúne datos públicos sobre amenazas en Chile con cada cifra rastreable hasta su fuente.">
 <meta name="referrer" content="no-referrer">
+<meta name="theme-color" content="#0B1A2E">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="icon" href="favicon-32.png" sizes="32x32" type="image/png">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="stylesheet" href="css/nadir.css">
 </head>
-<body>
+<body class="inicio">
 <a class="saltar" href="#contenido">Saltar al contenido</a>
-<header class="cabecera">
-  <div class="ancho cabecera__fila">
-    <a class="marca" href="index.html"><img src="img/nadir-sello-color.svg" alt="Nadir, inicio" width="132" height="40"></a>
-    <nav aria-label="Principal"><ul class="menu"><li><a href="index.html" aria-current="page">Inicio</a></li><li><a href="casos.html">Casos</a></li><li><a href="metodo.html">Método y datos</a></li><li><a href="acerca.html">Acerca de</a></li></ul></nav>
-  </div>
+<div class="campo oscuro">
+<header class="barra">
+  <a class="marca" href="index.html"><img src="img/nadir-sello-negativo.svg" alt="Nadir, inicio" width="132" height="40"></a>
+  <nav aria-label="Principal"><ul><li><a href="index.html" aria-current="page">Inicio</a></li><li><a href="casos.html">Casos</a></li><li><a href="metodo.html">Fuentes y método</a></li><li><a href="bitacora.html">Bitácora</a></li><li><a href="acerca.html">Acerca de</a></li></ul></nav>
 </header>
-<main id="contenido" class="ancho">
 
-<section class="portada">
-  <h1>Observatorio de riesgo y exposición</h1>
-  <p class="entrada">Nadir reúne datos públicos sobre incendios, cobertura del suelo y otras amenazas en Chile. Cada cifra que publica se puede rastrear hasta su fuente y comprobar.</p>
+<section class="hero ancho">
+  <span class="luz" aria-hidden="true"></span>
+  <h1>Nadir<span>observatorio de riesgo y exposición</span></h1>
+  <p>Cada punto de esta grilla es una celda de territorio. Nadir enciende las que tienen algo que mostrar y publica de dónde sale cada cifra.</p>
 </section>
 
-<section aria-labelledby="destacado">
-  <h2 id="destacado">En preparación</h2>
-  <article class="tarjeta">
-    <h3>Fuego y cobertura del suelo con datos de MapBiomas Chile</h3>
-    <p>Un estudio sobre qué pasa con la cobertura del suelo después de los incendios, con un protocolo escrito antes de mirar los resultados. Se publica aquí cuando esté terminado y revisado.</p>
-  </article>
+</div>
+<main id="contenido">
+
+<section class="caso oscuro ancho-completo" aria-labelledby="caso-titulo">
+  <div class="caso-rejilla ancho">
+    
+<figure class="comparador" data-comparador>
+  <div class="capas">
+    <img src="img/vina-antes.jpg" alt="Viña del Mar antes del incendio de febrero de 2024, imagen satelital en color real" width="1600" height="1173">
+    <img class="despues" src="img/vina-despues.jpg" alt="Viña del Mar después del incendio de febrero de 2024; el área quemada se ve en tonos pardos oscuros" width="1600" height="1173">
+    <span class="costura" aria-hidden="true"></span>
+    <span class="rotulo r-antes">Antes</span><span class="rotulo r-despues">Después</span>
+  </div>
+  <label class="control"><span class="oculto">Mover el corte entre antes y después</span>
+    <input type="range" min="0" max="100" value="50" step="1">
+  </label>
+  <figcaption>Viña del Mar, antes y después del incendio de febrero de 2024. Sentinel-2 en color real. Contiene datos modificados de Copernicus Sentinel (2024).</figcaption>
+</figure>
+<script>
+document.querySelectorAll("[data-comparador]").forEach(function (f) {
+  var r = f.querySelector("input");
+  function poner() { f.style.setProperty("--corte", r.value + "%"); }
+  r.addEventListener("input", poner); poner();
+});
+</script>
+
+    <div class="caso-texto">
+      <h2 id="caso-titulo">Primer caso: severidad del incendio de Viña del Mar</h2>
+      <p>Un mapa reproducible de la severidad del fuego, calculado desde Sentinel-2 y contrastado con la delimitación del servicio de emergencias de Copernicus.</p>
+      <p>Mueve el control para pasar de antes a después.</p>
+      <a class="enlace" href="casos.html">Ver el caso</a>
+    </div>
+  </div>
 </section>
 
-<section aria-labelledby="verificamos">
-  <h2 id="verificamos">Cómo verificamos</h2>
-  <ol class="pasos">
-    <li><strong>Guardamos el original.</strong> Cada archivo de una fuente oficial se guarda tal como llegó, con su dirección de origen, la fecha y una huella digital (sha256) que cambia si se altera un solo byte.</li>
-    <li><strong>Escribimos el método antes.</strong> Las preguntas, los supuestos y las pruebas se fijan antes de mirar los resultados. El código queda abierto para que cualquiera lo rehaga.</li>
-    <li><strong>Comprobamos lo publicado.</strong> Un programa compara cada cifra de las páginas y fichas con los datos que la producen. Si no calzan, no se publica.</li>
-  </ol>
+<section class="recorrido oscuro ancho-completo" aria-labelledby="recorrido-titulo">
+  <div class="ancho">
+    <h2 id="recorrido-titulo">Recorrido</h2>
+    
+<ol class="salas" aria-label="Recorrido">
+  <li><a href="acerca.html"><span class="marca-sala"></span><span class="t">Entrada</span><span class="d">Qué es Nadir y quién lo hace.</span></a></li>
+  <li><a href="metodo.html"><span class="marca-sala"></span><span class="t">Instrumentos</span><span class="d">Qué ve cada fuente y qué no.</span></a></li>
+  <li><a href="casos.html"><span class="marca-sala"></span><span class="t">Observaciones</span><span class="d">Los casos y sus cifras verificadas.</span></a></li>
+  <li><a href="bitacora.html"><span class="marca-sala"></span><span class="t">Bitácora</span><span class="d">El trabajo por dentro, con fecha.</span></a></li>
+</ol>
+
+  </div>
+</section>
+
+<section class="claro ancho-completo" aria-labelledby="verificamos">
+  <div class="ancho">
+    <h2 id="verificamos">Cómo verificamos</h2>
+    <ol class="pasos">
+      <li><strong>Guardamos el original.</strong> Cada archivo de una fuente oficial se guarda tal como llegó, con su dirección de origen, la fecha y una huella digital (sha256) que cambia si se altera un solo byte.</li>
+      <li><strong>Escribimos el método antes.</strong> Las preguntas, los supuestos y las pruebas se fijan antes de mirar los resultados. El código queda abierto para que cualquiera lo rehaga.</li>
+      <li><strong>Comprobamos lo publicado.</strong> Un programa compara cada cifra de las páginas y fichas con los datos que la producen. Si no calzan, no se publica.</li>
+    </ol>
+  </div>
 </section>
 
 </main>
-<footer class="pie">
-  <div class="ancho pie__fila">
+<footer class="pie oscuro">
+  <div class="ancho">
+    <img src="img/nadir-sello-negativo.svg" alt="" width="106" height="32">
     <p>Código con licencia MIT. Cada capa de datos conserva la licencia de su fuente, indicada en su ficha.</p>
-    <p><a href="https://github.com/nadir-observatorio/nadir">Repositorio en GitHub</a> · <a href="mailto:nadir.observatorio@gmail.com">nadir.observatorio@gmail.com</a></p>
+    <p><a href="https://github.com/Nadir-Observatorio">Nadir en GitHub</a> · <a href="mailto:nadir.observatorio@gmail.com">nadir.observatorio@gmail.com</a></p>
   </div>
 </footer>
 </body>
