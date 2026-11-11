@@ -95,6 +95,7 @@ body.inicio .salas li:nth-child(3) .marca-sala { background: var(--cian); }
 .pasos li::before { content: counter(paso); display: block; color: var(--cian-osc); font-weight: 600; font-size: 1.6rem; line-height: 1; margin-bottom: .75rem; }
 .pasos strong { display: block; color: var(--noche); font-weight: 500; font-size: 1.15rem; margin-bottom: .35rem; }
 
+.claro h2.linea { font-size: 1.1rem; font-weight: 500; color: var(--tinta-2); margin: 0 0 1rem; }
 .lista-casos { list-style: none; margin: 0; padding: 0; display: grid; gap: 1.5rem; }
 .claro .lista-casos > li, .claro .pasos > li { max-width: none; }
 .tarjeta-caso { display: grid; grid-template-columns: minmax(0, 2fr) minmax(0, 3fr); gap: clamp(1.25rem, 3vw, 2.5rem); background: var(--hoja); padding: clamp(1rem, 2vw, 1.5rem); align-items: center; }
@@ -131,6 +132,38 @@ figcaption { color: var(--tinta-2); font-size: .95em; margin-top: .5rem; }
 .pie img { height: 2rem; width: auto; margin-bottom: 1rem; }
 .pie p { margin: .25rem 0; }
 .pie a { color: #E4EAF1; }
+
+/* Capacidad de respuesta */
+.enlace.secundario { margin-top: .6rem; color: #C9D3DE; font-weight: 400; }
+.tarjeta-caso img.contener { object-fit: contain; background: var(--hoja); }
+.aviso { background: var(--hoja); border-left: 3px solid var(--cian-osc); padding: .9rem 1.2rem; color: var(--noche); }
+.aviso.destacado { border-left-color: var(--noche); font-weight: 500; margin: 0 0 clamp(2rem, 4vw, 3rem); }
+.claro strong { font-weight: 600; }
+.tabla-desliza { overflow-x: auto; margin: 1.5rem 0; background: var(--hoja); }
+.claro table { border-collapse: collapse; width: 100%; font-size: .95rem; font-variant-numeric: tabular-nums; }
+.claro caption { text-align: left; color: var(--tinta-2); padding: .9rem 1rem; caption-side: top; }
+.claro th, .claro td { padding: .6rem 1rem; border-top: 1px solid var(--linea); text-align: right; white-space: nowrap; }
+.claro th[scope="row"], .claro thead th:first-child { text-align: left; }
+.claro thead th { font-weight: 500; vertical-align: bottom; white-space: normal; }
+.claro tbody th { font-weight: 500; }
+.claro td.texto, .claro th.texto { text-align: left; white-space: normal; min-width: 16rem; }
+.general { margin-top: 1.5rem; }
+.general summary { cursor: pointer; font-weight: 500; color: var(--cian-texto); padding: .5rem 0; }
+.selector { display: flex; flex-wrap: wrap; gap: .4rem; margin: 1.5rem 0 2rem; position: sticky; top: 0; z-index: 2; background: var(--niebla); padding-block: .6rem; }
+.selector[hidden] { display: none; }
+.selector button { font: inherit; font-size: .95rem; padding: .45rem .9rem; border: 1px solid var(--noche); background: var(--hoja); color: var(--noche); cursor: pointer; border-radius: 2px; }
+.selector button[aria-selected="true"] { background: var(--noche); color: #fff; }
+.region { margin-top: 2rem; }
+.region h2 { font-size: clamp(1.6rem, 1.2rem + 1.4vw, 2.5rem); }
+.resumen-region { max-width: 46rem; }
+.tema { margin-top: clamp(2.5rem, 5vw, 4rem); }
+.tema h3 { font-size: 1.3rem; margin: 0 0 .4rem; }
+.fig-dato { margin: 1rem 0; max-width: 72rem; }
+.fig-dato img { background: var(--hoja); width: 100%; }
+.vinculo { font-weight: 500; }
+.exploratorio { margin-top: clamp(3rem, 6vw, 5rem); border: 2px dashed var(--tinta-2); padding: clamp(1.25rem, 3vw, 2rem); }
+.rotulo-explo { display: inline-block; margin: 0 0 1rem; padding: .2rem .7rem; background: var(--noche); color: #fff; font-weight: 600; letter-spacing: .12em; font-size: .85rem; }
+.avisos li { margin-bottom: .5rem; }
 
 @media (max-width: 860px) {
   .caso-rejilla, .tarjeta-caso { grid-template-columns: 1fr; }
