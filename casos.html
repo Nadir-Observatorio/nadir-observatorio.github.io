@@ -19,7 +19,7 @@
   <a class="marca" href="index.html"><img src="img/nadir-sello-negativo.svg" alt="Nadir, inicio" width="132" height="40"></a>
   <nav aria-label="Principal"><ul><li><a href="index.html">Inicio</a></li><li><a href="casos.html" aria-current="page">Casos</a></li><li><a href="metodo.html">Fuentes y método</a></li><li><a href="bitacora.html">Bitácora</a></li><li><a href="acerca.html">Acerca de</a></li></ul></nav>
 </header>
-<section class="titular ancho"><h1>Casos</h1><p>Cada caso tiene su visor, su ficha y su código. Las cifras están en el caso, no en esta página.</p></section>
+<section class="titular ancho"><h1>Casos</h1><p>La cifra de cada tarjeta se lee de los datos publicados del caso; el método, los intervalos y los límites están en su página.</p></section>
 </div>
 <main id="contenido">
 
@@ -31,7 +31,21 @@
     <div>
       <h2>Severidad del incendio de Viña del Mar, febrero de 2024</h2>
       <p>Severidad del fuego estimada con imágenes Sentinel-2, con intervalos y validación, y capas de contexto con su procedencia.</p>
+      <p class="cifra">9.211,9 ha</p>
+      <p class="lectura">quemadas, calibrado localmente con Copernicus EMSR715. Intervalo del 95 %, 8.634,5 a 9.582,1 ha.</p>
+      <p class="nota">Pasó a ser la cifra principal después de ver los resultados (enmienda del 11 de noviembre de 2026). La regla original sigue en la página del caso.</p>
       <p class="enlaces"><a href="incendio-vina-2024/">Abrir el mapa interactivo</a> · <a href="https://github.com/Nadir-Observatorio/incendio-vina-2024/blob/main/ficha/ficha.pdf">Ficha en PDF</a> · <a href="https://github.com/Nadir-Observatorio/incendio-vina-2024">Código y datos</a></p>
+    </div>
+  </li>
+  <li class="tarjeta-caso">
+    <img class="contener" src="casos/dano-edificaciones/figuras/fig_coherencia_z.png" alt="Mapa de la pérdida de coherencia del radar Sentinel-1 entre antes y después del incendio en Viña del Mar y alrededores, con el contorno del área analizada por Copernicus EMSN188 y el área quemada de EMSR715." width="1200" height="1110" loading="lazy">
+    <div>
+      <h2>Daño a edificaciones en el incendio de Viña del Mar, febrero de 2024</h2>
+      <p>¿Qué edificaciones dañadas ve el radar que el satélite óptico no ve?</p>
+      <p class="cifra">79,4 %</p>
+      <p class="lectura">de las edificaciones con daño según Copernicus EMS aparecen como daño probable en el radar Sentinel-1. Intervalo del 95 %, 59,9 % a 89,7 %.</p>
+      <p class="nota">Copernicus EMS, SENAPRED y MINVU no validaron estos resultados.</p>
+      <p class="enlaces"><a href="dano-edificaciones.html">Abrir el caso</a> · <a href="dano-edificaciones.html#datos">Datos y licencias</a></p>
     </div>
   </li>
   <li class="tarjeta-caso">
@@ -43,6 +57,24 @@
     </div>
   </li>
 </ul>
+
+<h2 class="linea">Exclusión financiera</h2>
+<ul class="lista-casos">
+  <li class="tarjeta-caso">
+    <figure class="tarjeta-fig">
+      <img class="contener" src="img/desiertos-tiempo-a-pie.jpg" alt="Mapa de la Región Metropolitana en hexágonos coloreados según el tiempo a pie hasta el punto más cercano para sacar dinero, con los nombres de las comunas" width="1300" height="852" loading="lazy">
+      <figcaption>Contiene información de OpenStreetMap, disponible bajo ODbL.</figcaption>
+    </figure>
+    <div>
+      <h2>Desiertos financieros de la Región Metropolitana</h2>
+      <p>¿Quién vive lejos, a pie, del punto más cercano para sacar dinero?</p>
+      <p class="cifra">5,9 %</p>
+      <p class="lectura">de la población, 429.400 personas, vive a más de 15 minutos a pie del punto más cercano, sea sucursal, cajero o Caja Vecina.</p>
+      <p class="enlaces"><a href="https://nadir-observatorio.github.io/desiertos-financieros-rm/visor/">Mapa interactivo</a> · <a href="https://github.com/Nadir-Observatorio/desiertos-financieros-rm">Código y método</a></p>
+    </div>
+  </li>
+</ul>
+
 </div></div>
 
 </main>

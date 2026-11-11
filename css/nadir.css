@@ -165,10 +165,37 @@ figcaption { color: var(--tinta-2); font-size: .95em; margin-top: .5rem; }
 .rotulo-explo { display: inline-block; margin: 0 0 1rem; padding: .2rem .7rem; background: var(--noche); color: #fff; font-weight: 600; letter-spacing: .12em; font-size: .85rem; }
 .avisos li { margin-bottom: .5rem; }
 
+/* Cifra protagonista y bloques cortos (regla de diseño: una idea, una cifra) */
+.tarjeta-caso .cifra { font-size: clamp(2.2rem, 1.5rem + 2.4vw, 3.4rem); font-weight: 600; line-height: 1; letter-spacing: -.02em;
+  color: var(--noche); margin: 1.25rem 0 .4rem; font-variant-numeric: tabular-nums; }
+.tarjeta-caso .lectura { color: var(--noche); }
+.tarjeta-caso .nota { font-size: .9em; }
+.tarjeta-fig { margin: 0; }
+.tarjeta-fig figcaption { font-size: .85rem; }
+.lista-casos + h2.linea { margin-top: clamp(3rem, 6vw, 4.5rem); }
+.cifra-central { display: grid; grid-template-columns: minmax(0, 2fr) minmax(0, 3fr); gap: clamp(1.5rem, 4vw, 3.5rem); align-items: center;
+  margin: 0 0 clamp(3rem, 6vw, 5rem); }
+.cifra-central .numero { font-size: clamp(4rem, 2.4rem + 6vw, 7.5rem); font-weight: 600; line-height: .95; letter-spacing: -.035em;
+  margin: 0 0 .75rem; font-variant-numeric: tabular-nums; }
+.cifra-central .lectura { font-size: clamp(1.15rem, 1rem + .5vw, 1.45rem); line-height: 1.4; margin: 0 0 1rem; max-width: 30rem; }
+.cifra-central .fig-dato { margin: 0; }
+.ic { color: var(--tinta-2); font-size: .92em; white-space: nowrap; }
+.claro section.bloque { display: grid; grid-template-columns: minmax(0, 2fr) minmax(0, 3fr); gap: clamp(1.25rem, 3vw, 2.5rem);
+  align-items: start; border-top: 2px solid var(--noche); padding-top: 1.25rem; margin-top: clamp(2rem, 4vw, 3rem); }
+.bloque h2 { font-size: clamp(1.3rem, 1.1rem + .7vw, 1.7rem); margin: 0 0 .75rem; }
+.bloque .fig-dato { margin: 0; }
+.detalle { margin-top: clamp(3rem, 6vw, 4.5rem); background: var(--hoja); padding: .75rem 1.25rem; }
+.detalle summary { cursor: pointer; font-weight: 500; color: var(--cian-texto); padding: .5rem 0; }
+.detalle ul { margin: .5rem 0 1rem; padding-left: 1.2rem; }
+.detalle li { margin-bottom: .5rem; }
+.claro .detalle + section { margin-top: clamp(3rem, 6vw, 5rem); }
+
 @media (max-width: 860px) {
-  .caso-rejilla, .tarjeta-caso { grid-template-columns: 1fr; }
+  .caso-rejilla, .tarjeta-caso, .cifra-central, .claro section.bloque { grid-template-columns: 1fr; }
   .salas { grid-template-columns: 1fr 1fr; }
   .pasos, .fichas { grid-template-columns: 1fr; }
   .hero .luz { top: 22%; right: 12%; }
 }
+@media (max-width: 420px) { .salas { grid-template-columns: 1fr; } .salas a { min-height: 0; } .salas .marca-sala { margin-bottom: 1.25rem; } }
+.tabla-desliza:focus-visible { outline: 3px solid var(--cian-osc); outline-offset: 2px; }
 @media (prefers-reduced-motion: reduce) { .hero .luz { animation: none; } }

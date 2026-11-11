@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Daño a edificaciones · Nadir</title>
+<meta name="description" content="Qué edificaciones dañadas en el incendio de Viña del Mar de 2024 ve el radar Sentinel-1 que el satélite óptico no ve.">
+<meta name="referrer" content="no-referrer">
+<meta name="theme-color" content="#0B1A2E">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="icon" href="favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="stylesheet" href="css/nadir.css">
+</head>
+<body class="interior">
+<a class="saltar" href="#contenido">Saltar al contenido</a>
+<div class="campo oscuro">
+<header class="barra">
+  <a class="marca" href="index.html"><img src="img/nadir-sello-negativo.svg" alt="Nadir, inicio" width="132" height="40"></a>
+  <nav aria-label="Principal"><ul><li><a href="index.html">Inicio</a></li><li><a href="casos.html" aria-current="page">Casos</a></li><li><a href="metodo.html">Fuentes y método</a></li><li><a href="bitacora.html">Bitácora</a></li><li><a href="acerca.html">Acerca de</a></li></ul></nav>
+</header>
+<section class="titular ancho"><h1>Daño a edificaciones</h1><p>¿Qué edificaciones dañadas ve el radar que el satélite óptico no ve? Incendio de Viña del Mar, febrero de 2024.</p></section>
+</div>
+<main id="contenido">
+
+<div class="claro ancho-completo"><div class="ancho">
+<p class="aviso destacado">Daño probable según radar, no un dictamen sobre cada vivienda. Copernicus EMS, SENAPRED y MINVU no validaron estos resultados.</p>
+
+<section class="cifra-central" aria-labelledby="central">
+  <div>
+    <p class="numero" id="central">79,4 %</p>
+    <p class="lectura">de las edificaciones con daño según Copernicus EMS aparecen como daño probable en el radar Sentinel-1.</p>
+    <p class="nota">Intervalo del 95 %, 59,9 % a 89,7 %. Todas las cifras de esta página son de la partición de prueba, evaluada una sola vez.</p>
+  </div>
+  <figure class="fig-dato"><a href="casos/dano-edificaciones/figuras/fig_coherencia_z.png"><img src="casos/dano-edificaciones/figuras/fig_coherencia_z.png" alt="Mapa de la pérdida de coherencia del radar Sentinel-1 entre antes y después del incendio en Viña del Mar y alrededores, con el contorno del área analizada por Copernicus EMSN188 y el área quemada de EMSR715." width="1200" height="1110"></a><figcaption>Fuente: Nadir. Sentinel-1 (Copernicus, procesado por ASF HyP3), Copernicus EMS EMSN188 y EMSR715, Google Open Buildings. CC BY 4.0. No validado por Copernicus EMS, SENAPRED ni MINVU.</figcaption></figure>
+</section>
+
+<section class="bloque" aria-labelledby="optico">
+  <div>
+    <h2 id="optico">El radar suma lo que el óptico no ve</h2>
+    <p>Sentinel-2, todas las clases quemadas, detecta 53,0 % <span class="ic">(46,6 % a 56,4 %)</span>. Con el radar se llega a 88,7 % <span class="ic">(77,1 % a 94,7 %)</span>.</p>
+    <p class="nota">Es la regla óptica más favorable a Sentinel-2.</p>
+  </div>
+  <figure class="fig-dato"><a href="casos/dano-edificaciones/figuras/fig_optico_vs_union.png"><img src="casos/dano-edificaciones/figuras/fig_optico_vs_union.png" alt="Dos mapas de celdas hexagonales comparan qué fracción de las edificaciones con daño según EMSN188 detecta Sentinel-2 solo y Sentinel-2 junto con Sentinel-1." width="1650" height="900" loading="lazy"></a><figcaption>Fuente: Nadir. Sentinel-1 (Copernicus, procesado por ASF HyP3), Copernicus EMS EMSN188 y EMSR715, Google Open Buildings. CC BY 4.0. No validado por Copernicus EMS, SENAPRED ni MINVU.</figcaption></figure>
+</section>
+
+<section class="bloque" aria-labelledby="alarmas">
+  <div>
+    <h2 id="alarmas">Falsas alarmas</h2>
+    <p>Marca 4,3 % <span class="ic">(3,0 % a 6,0 %)</span> de las edificaciones sin daño registrado y 1,3 % <span class="ic">(1,0 % a 1,6 %)</span> de las que están lejos del fuego.</p>
+  </div>
+  <figure class="fig-dato"><a href="casos/dano-edificaciones/figuras/fig_sensibilidad.png"><img src="casos/dano-edificaciones/figuras/fig_sensibilidad.png" alt="Gráfico de barras con intervalos que compara la fracción de edificaciones dañadas detectada por Sentinel-2, Sentinel-1 y ambos, y por Sentinel-1 según el grado de daño." width="1290" height="720" loading="lazy"></a><figcaption>Fuente: Nadir. Sentinel-1 (Copernicus, procesado por ASF HyP3), Copernicus EMS EMSN188 y EMSR715, Google Open Buildings. CC BY 4.0. No validado por Copernicus EMS, SENAPRED ni MINVU.</figcaption></figure>
+</section>
+
+<section class="bloque" aria-labelledby="fuera">
+  <div>
+    <h2 id="fuera">Fuera de la zona afectada</h2>
+    <p>El radar no marca un área de daño fuera de la zona afectada. Solo 40 de 8.763 celdas superan el umbral, dispersas.</p>
+    <p class="nota">Estimación de modelo.</p>
+  </div>
+  <figure class="fig-dato"><a href="casos/dano-edificaciones/figuras/fig_p5_fuera_emsn188.png"><img src="casos/dano-edificaciones/figuras/fig_p5_fuera_emsn188.png" alt="Mapa de las pocas celdas fuera del área de EMSN188 donde la señal del radar supera el umbral, dispersas y lejos del área quemada de EMSR715." width="1200" height="1110" loading="lazy"></a><figcaption>Fuente: Nadir. Sentinel-1 (Copernicus, procesado por ASF HyP3), Copernicus EMS EMSN188 y EMSR715, Google Open Buildings. CC BY 4.0. No validado por Copernicus EMS, SENAPRED ni MINVU.</figcaption></figure>
+</section>
+
+<details class="detalle">
+  <summary>Detalle</summary>
+  <ul>
+    <li>La referencia es el "Detailed damage assessment" de Copernicus EMS (EMSN188), una fotointerpretación sobre una imagen posterior al incendio. Sus edificaciones sin punto son "sin daño registrado", no "sin daño".</li>
+    <li>Por grado de daño. Destroyed 88,6 % <span class="ic">(76,5 % a 94,4 %)</span>; Damaged 77,7 % <span class="ic">(57,6 % a 88,8 %)</span>; Possible damage 45,3 % <span class="ic">(22,2 % a 72,4 %)</span>.</li>
+    <li>Entre las edificaciones dañadas que el óptico no detectó, el radar recupera 76,1 % <span class="ic">(55,7 % a 88,0 %)</span>. Suma 35,8 puntos porcentuales a la detección óptica.</li>
+    <li>Con el umbral calibrado, que es la cifra principal del caso de severidad, el óptico deja en quemado 35,9 % de las edificaciones dañadas de la muestra de ese caso (n = 145).</li>
+    <li>Precisión, es decir, marcas del radar con daño registrado, 62,5 % <span class="ic">(44,9 % a 71,3 %)</span>. Capacidad de ordenar (AUC) 0,94.</li>
+    <li>Por órbita. Ascendente 65,0 % <span class="ic">(45,6 % a 78,6 %)</span>; descendente 71,3 % <span class="ic">(50,8 % a 83,9 %)</span>.</li>
+    <li>Con huellas de edificios de confianza 0,65 o más, 77,9 % <span class="ic">(59,1 % a 89,2 %)</span>.</li>
+    <li>Las falsas alarmas lejos del fuego se miden en edificaciones a más de 2 km del área quemada de Copernicus EMSR715.</li>
+    <li>Fuera de la zona de EMSN188, de las 40 celdas sobre el umbral, 1 toca el área quemada de EMSR715 y 2 quedan a menos de 500 m de ella.</li>
+    <li>2,3 % de los 7.275 puntos de daño de EMSN188 no tienen una huella de Google Open Buildings a 10 m o menos.</li>
+  </ul>
+</details>
+
+<section aria-labelledby="avisos">
+  <h2 id="avisos">Avisos y atribuciones</h2>
+  <ul class="avisos">
+    <li>El radar mide cambio, no su tipo. Una marca es daño probable, no una casa destruida.</li>
+    <li>No hay mapa por vivienda. Los resultados se publican solo por celda hexagonal.</li>
+    <li>EMSN188 es la referencia, no la verdad.</li>
+    <li>Copernicus EMS, SENAPRED y MINVU no validaron estos resultados.</li>
+  </ul>
+  <h3>Atribuciones</h3>
+  <ul><li>Contains modified Copernicus Sentinel data 2023-2024, processed by ESA.</li><li>Sentinel-1 Burst InSAR products processed by ASF DAAC HyP3 2026 using ISCE software (hyp3_isce2 3.0.2, ISCE 2.6.5).</li><li>Copernicus Emergency Management Service (© 2024 European Union), EMSN188 P08 Detailed damage assessment, y EMSR715 AOI01 Delineation Map v2.</li><li>Google Open Buildings (CC BY 4.0).</li><li>Severidad de Sentinel-2: Nadir, incendio de Viña del Mar 2024 (CC BY 4.0).</li></ul>
+</section>
+
+<section aria-labelledby="datos">
+  <h2 id="datos">Datos y licencias</h2>
+  <div class="tabla-desliza" tabindex="0" role="region" aria-label="Tabla, se desplaza hacia el lado"><table>
+    <caption>Celdas hexagonales y métricas de validación, con licencia CC BY 4.0.</caption>
+    <thead><tr><th scope="col">Archivo</th><th scope="col">Filas</th><th scope="col">Peso</th><th scope="col" class="texto">Licencia</th></tr></thead>
+    <tbody><tr><th scope="row"><a href="casos/dano-edificaciones/datos/celdas_r10.parquet" download>celdas_r10.parquet</a></th><td>10.458</td><td>197 KB</td><td class="texto">CC BY 4.0</td></tr><tr><th scope="row"><a href="casos/dano-edificaciones/datos/celdas_r9.parquet" download>celdas_r9.parquet</a></th><td>2.116</td><td>52 KB</td><td class="texto">CC BY 4.0</td></tr><tr><th scope="row"><a href="casos/dano-edificaciones/datos/validacion.parquet" download>validacion.parquet</a></th><td>96</td><td>6 KB</td><td class="texto">CC BY 4.0</td></tr></tbody>
+  </table></div>
+  
+  <h3>Cómo citar</h3>
+  <p class="cita">López Barra, C. Daño a edificaciones en el incendio de Viña del Mar, febrero de 2024. Nadir: observatorio de riesgo y exposición. https://nadir-observatorio.github.io/dano-edificaciones.html (consultado el día en que lo visitó).</p>
+</section>
+</div></div>
+
+</main>
+<footer class="pie oscuro">
+  <div class="ancho">
+    <img src="img/nadir-sello-negativo.svg" alt="" width="106" height="32">
+    <p>Código con licencia MIT. Cada capa de datos conserva la licencia de su fuente, indicada en su ficha.</p>
+    <p><a href="https://github.com/Nadir-Observatorio">Nadir en GitHub</a> · <a href="mailto:nadir.observatorio@gmail.com">nadir.observatorio@gmail.com</a></p>
+  </div>
+</footer>
+</body>
+</html>
