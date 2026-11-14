@@ -189,6 +189,15 @@ figcaption { color: var(--tinta-2); font-size: .95em; margin-top: .5rem; }
 .detalle ul { margin: .5rem 0 1rem; padding-left: 1.2rem; }
 .detalle li { margin-bottom: .5rem; }
 .claro .detalle + section { margin-top: clamp(3rem, 6vw, 5rem); }
+.eti-caso { font-size: .8rem; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; color: var(--cian-texto); margin: 0 0 .5rem; }
+.numero-medio { font-size: clamp(2.4rem, 1.6rem + 2.6vw, 3.6rem); font-weight: 600; line-height: 1; letter-spacing: -.02em;
+  color: var(--noche); margin: .25rem 0 .6rem; font-variant-numeric: tabular-nums; }
+.leyenda-sev { list-style: none; padding: 0; margin: .75rem 0; display: flex; flex-wrap: wrap; gap: .4rem 1rem; font-size: .9rem; }
+.leyenda-sev i { display: inline-block; width: 14px; height: 14px; border-radius: 2px; margin-right: .4rem; vertical-align: -2px; }
+.tarjeta-caso.integrada { outline: 2px solid var(--noche); outline-offset: -2px; }
+.donde { font-size: .85rem; font-weight: 500; letter-spacing: .02em; color: var(--cian-texto) !important; margin: -.4rem 0 .8rem !important; }
+.intro-linea { color: var(--tinta-2); margin: -.5rem 0 1.25rem; max-width: 40rem; }
+.claro section.bloque + section:not(.bloque) { margin-top: clamp(3rem, 6vw, 4.5rem); }
 
 @media (max-width: 860px) {
   .caso-rejilla, .tarjeta-caso, .cifra-central, .claro section.bloque { grid-template-columns: 1fr; }
