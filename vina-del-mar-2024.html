@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Incendio de Viña del Mar, 2024 · Nadir</title>
+<meta name="description" content="Tres métodos de Nadir aplicados al incendio de Viña del Mar de 2024: severidad, daño a edificaciones y tiempo de viaje de bomberos.">
+<meta name="referrer" content="no-referrer">
+<meta name="theme-color" content="#0B1A2E">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="icon" href="favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="stylesheet" href="css/nadir.css">
+</head>
+<body class="interior">
+<a class="saltar" href="#contenido">Saltar al contenido</a>
+<div class="campo oscuro">
+<header class="barra">
+  <a class="marca" href="index.html"><img src="img/nadir-sello-negativo.svg" alt="Nadir, inicio" width="132" height="40"></a>
+  <nav aria-label="Principal"><ul><li><a href="index.html">Inicio</a></li><li><a href="casos.html" aria-current="page">Casos</a></li><li><a href="metodo.html">Fuentes y método</a></li><li><a href="bitacora.html">Bitácora</a></li><li><a href="acerca.html">Acerca de</a></li></ul></nav>
+</header>
+<section class="titular ancho"><h1>Incendio de Viña del Mar, 2024</h1><p>Tres métodos de Nadir aplicados al incendio del 2 y 3 de febrero de 2024 en Valparaíso, Viña del Mar, Quilpué y Villa Alemana. Miden cuánto se quemó, qué edificaciones se dañaron y a qué tiempo de viaje quedan las compañías de bomberos en la región.</p></section>
+</div>
+<main id="contenido">
+
+<div class="claro ancho-completo"><div class="ancho">
+<p class="aviso destacado">Cada método es un caso con sus propias fuentes y límites. Esta página los pone lado a lado y no saca conclusiones que ninguno de los tres midió.</p>
+
+<section class="bloque" aria-labelledby="quemo">
+  <div>
+    <p class="eti-caso">1 · Severidad · Sentinel-2</p>
+    <h2 id="quemo">Cuánto se quemó</h2>
+    <p class="numero-medio">9.211,9 ha</p>
+    <p>quemadas, calibrado localmente con Copernicus EMSR715. Intervalo del 95 %, 8.634,5 a 9.582,1 ha.</p>
+    <ul class="leyenda-sev" aria-label="Clases de severidad"><li><i style="background:#FEE08B"></i>Baja</li><li><i style="background:#FDAE61"></i>Moderada baja</li><li><i style="background:#F46D43"></i>Moderada alta</li><li><i style="background:#A50026"></i>Alta</li></ul>
+    <p class="enlaces"><a href="incendios-severidad/">Mapa interactivo</a> · <a href="https://github.com/Nadir-Observatorio/incendios-severidad/blob/main/ficha/ficha.pdf">Ficha en PDF</a> · <a href="https://github.com/Nadir-Observatorio/incendios-severidad">Código y datos</a></p>
+  </div>
+  <figure class="fig-dato"><img src="img/vina-severidad.jpg" alt="Mapa de severidad del fuego con Sentinel-2 sobre la imagen posterior oscurecida, en amarillo, naranjo y rojo de baja a alta severidad" width="1200" height="1159">
+    <figcaption>Severidad por dNBR con Sentinel-2, clases de Key y Benson (2006). Contiene datos modificados de Copernicus Sentinel (2024). Mapa: CC BY 4.0.</figcaption></figure>
+</section>
+
+<section class="bloque" aria-labelledby="dano">
+  <div>
+    <p class="eti-caso">2 · Daño a edificaciones · Sentinel-1</p>
+    <h2 id="dano">Qué edificaciones se dañaron</h2>
+    <p class="numero-medio">79,4 %</p>
+    <p>de las edificaciones con daño según Copernicus EMS mostraron un cambio en el radar (intervalo del 95 %, 59,9 % a 89,7 %). El óptico solo ve 53,0 %; con los dos se llega a 88,7 %.</p>
+    <p class="nota">Daño probable, no confirmado. Resultados por zona, no por vivienda. Copernicus EMS, SENAPRED y MINVU no validaron estos resultados.</p>
+    <p class="enlaces"><a href="dano-edificaciones.html">Caso</a> · <a href="https://github.com/Nadir-Observatorio/incendios-dano-edificaciones">Código y método</a></p>
+  </div>
+  <figure class="fig-dato"><img src="casos/dano-edificaciones/figuras/fig_coherencia_z.png" alt="Mapa de la pérdida de coherencia del radar Sentinel-1 entre antes y después del incendio en Viña del Mar y alrededores, con el contorno del área analizada por Copernicus EMSN188 y el área quemada de EMSR715." width="1200" height="1110" loading="lazy">
+    <figcaption>Fuente: Nadir. Sentinel-1 (Copernicus, procesado por ASF HyP3), Copernicus EMS EMSN188 y EMSR715, Google Open Buildings. CC BY 4.0. No validado por Copernicus EMS, SENAPRED ni MINVU.</figcaption></figure>
+</section>
+
+<section class="bloque" aria-labelledby="viaje">
+  <div>
+    <p class="eti-caso">3 · Capacidad de respuesta · región de Valparaíso</p>
+    <h2 id="viaje">A qué tiempo de viaje quedan los bomberos</h2>
+    <p class="numero-medio">2,8 %</p>
+    <p>de la población de la región, 52.065 personas, vive a más de 15 minutos de viaje de una compañía de bomberos. En las zonas donde la quema se repitió entre 2013 y 2025 es 2,5 %. En esta región no sube; en el conjunto de las siete regiones pasa de 3,5 % a 10,7 %.</p>
+    <p class="nota">Es tiempo de viaje modelado, no tiempo de respuesta. En Viña del Mar, la capa oficial de 2017 tiene 8 compañías y OpenStreetMap registra otras 6 que no están en ella. Bomberos, MINSAL y SENAPRED no validaron estos resultados.</p>
+    <p class="enlaces"><a href="capacidad-respuesta.html">Caso</a></p>
+  </div>
+  <figure class="fig-dato"><img src="casos/capacidad-respuesta/figuras/fig_r05_tiempo_bomberos.png" alt="Mapa de la Región de Valparaíso con sus comunas rotuladas, coloreado por tiempo de viaje desde la compañía de bomberos más cercana en cuatro clases, de claro (cerca) a azul oscuro (lejos), con las compañías oficiales como triángulos." width="1600" height="1561" loading="lazy">
+    <figcaption>Fuente: Contiene información de OpenStreetMap, disponible bajo la Open Database License (ODbL); IDE Chile, Compañías de Bomberos de Chile (Junta Nacional de Bomberos, 2017, CC BY); INE, Censo de Población y Vivienda 2024, cartografía y resultados por manzana y entidad. Licencia: CC BY-SA 4.0 con aviso de OSM.</figcaption></figure>
+</section>
+
+<section aria-labelledby="nosabe">
+  <h2 id="nosabe">Lo que esta ficha no dice</h2>
+  <ul class="avisos">
+    <li>No relaciona los tres resultados entre sí. Los casos no se diseñaron juntos y usan áreas, fechas y unidades distintas: hectáreas quemadas, edificaciones y personas.</li>
+    <li>No cuenta personas damnificadas, viviendas perdidas ni víctimas. Esas cifras son de los organismos oficiales y no se reproducen aquí.</li>
+    <li>No evalúa la respuesta de bomberos, brigadistas ni voluntarios durante el incendio. El tiempo de viaje es un modelo de la red de calles, sin aviso, despacho ni condiciones del día.</li>
+    <li>Cada caso tiene sus límites completos en su página o en su repositorio.</li>
+  </ul>
+</section>
+
+<section aria-labelledby="avisos">
+  <h2 id="avisos">Avisos y atribuciones</h2>
+  <ul class="avisos">
+    <li>Contiene datos modificados de Copernicus Sentinel (2024). Copernicus EMS: EMSR715 y EMSN188 (© 2024 European Union).</li>
+    <li>Población: INE, Censo de Población y Vivienda 2024 (CC BY-SA 4.0). Quemas: MapBiomas Chile, Fuego Colección 1. Compañías de bomberos: IDE Chile (2017, CC BY).</li>
+    <li>Contiene información de OpenStreetMap, disponible bajo la Open Database License (ODbL).</li>
+  </ul>
+</section>
+</div></div>
+
+</main>
+<footer class="pie oscuro">
+  <div class="ancho">
+    <img src="img/nadir-sello-negativo.svg" alt="" width="106" height="32">
+    <p>Código con licencia MIT. Cada capa de datos conserva la licencia de su fuente, indicada en su ficha.</p>
+    <p><a href="https://github.com/Nadir-Observatorio">Nadir en GitHub</a> · <a href="mailto:nadir.observatorio@gmail.com">nadir.observatorio@gmail.com</a></p>
+  </div>
+</footer>
+</body>
+</html>
