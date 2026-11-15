@@ -10,6 +10,7 @@ comprueba su huella antes de usarlas.
 - Capacidad de respuesta (`casos/capacidad-respuesta/`): cada figura y cada capa llevan su licencia y su fuente en la página del caso.
 - Daño a edificaciones (`casos/dano-edificaciones/`): figuras y datos con licencia CC BY 4.0 y las atribuciones de su página.
 - Desiertos financieros (`img/desiertos-*.jpg` y su entrada de bitácora): capturas del mapa interactivo; contienen información de OpenStreetMap, disponible bajo ODbL.
+- Figura de la entrada de bitácora sobre Penco y Lirquén (`img/bitacora/*-referencia-de-dano-en-penco.jpg`): Nadir, con Copernicus Emergency Management Service (© 2024 y 2026 European Union) y Google Open Buildings (CC BY 4.0).
 - Código: licencia MIT.
 
 Hecho por Camilo López Barra, geógrafo.
